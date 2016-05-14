@@ -22,6 +22,8 @@ public class SftpBackupStorageVO extends BackupStorageVO {
     private String username;
     @Column
     private String password;
+    @Column
+    private int sshport;
 
     public SftpBackupStorageVO() {
     }
@@ -50,5 +52,11 @@ public class SftpBackupStorageVO extends BackupStorageVO {
     }
     public void setPassword(String password) {
         this.password = password;
+    }
+    public int getSshport() {
+        return sshport;
+    }
+    public void setSshport(int sshport) {
+        this.sshport = sshport;
     }
 }
