@@ -28,7 +28,7 @@ public class SftpBackupStorageInventory extends BackupStorageInventory {
         super(vo);
         hostname = vo.getHostname();
         username = vo.getUsername();
-        sshport = vo.getSshport();
+        sshport = vo.getPort();
     }
 
     public SftpBackupStorageInventory() {
