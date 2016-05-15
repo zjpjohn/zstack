@@ -16,8 +16,9 @@ import org.zstack.header.storage.backup.APIAddBackupStorageMsg;
  * {
 "org.zstack.storage.backup.sftp.APIAddSftpBackupStorageMsg": {
 "hostname": "localhost",
-"username": "root",
+"username": "username",
 "password": "password",
+"port": "port",
 "url": "nfs://test",
 "name": "sftp",
 "type": "SftpBackupStorage",
@@ -31,8 +32,9 @@ import org.zstack.header.storage.backup.APIAddBackupStorageMsg;
  * {
 "org.zstack.storage.backup.sftp.APIAddSftpBackupStorageMsg": {
 "hostname": "localhost",
-"username": "root",
+"username": "username",
 "password": "password",
+"port": "port",
 "url": "nfs://test",
 "name": "sftp",
 "type": "SftpBackupStorage",
