@@ -43,7 +43,7 @@ public class SftpBackupStorageFactory implements BackupStorageFactory, GlobalApi
         lvo.setHostname(amsg.getHostname());
         lvo.setUsername(amsg.getUsername());
         lvo.setPassword(amsg.getPassword());
-        lvo.setSshport(amsg.getPort());
+        lvo.setPort(amsg.getPort());
         dbf.persist(lvo);
         return SftpBackupStorageInventory.valueOf(lvo);
     }
