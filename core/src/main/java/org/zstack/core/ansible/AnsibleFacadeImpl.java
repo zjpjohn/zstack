@@ -195,6 +195,11 @@ public class AnsibleFacadeImpl extends AbstractService implements AnsibleFacade 
                    arguments.remove("remote_user");
                    arguments.remove("remote_pass");
                    arguments.remove("remote_port");
+                   if  ( ! arguments.get("remote_uer").equals("root")) {
+                       arguments.put("ansible_become", "yes");
+                       arguments.put("become_user", "root");
+                       arguments.put("become_pass", arguments.get("remote_pass"));
+                   }
                 }
                 String executable = msg.getAnsibleExecutable() == null ? AnsibleGlobalProperty.EXECUTABLE : msg.getAnsibleExecutable();
                 try {
