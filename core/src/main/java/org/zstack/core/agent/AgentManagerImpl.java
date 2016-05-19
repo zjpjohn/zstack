@@ -230,7 +230,7 @@ public class AgentManagerImpl extends AbstractService implements AgentManager {
                     ssh.setPort(msg.getSshPort());
                 }
                 if (!msg.getUsername().equals("root")) {
-                    ssh.command(String.format("if [ ! -d %s ]; then mkdir -p %s; fi && sudo chown -R %s %s ", AgentConstant.DST_ANSIBLE_ROOT,
+                    ssh.command(String.format("if [ ! -d %s ]; then sudo mkdir -p %s; fi && sudo chown -R %s %s ", AgentConstant.DST_ANSIBLE_ROOT,
                             PathUtil.parentFolder(AgentConstant.DST_ANSIBLE_ROOT), msg.getUsername(), AgentConstant.DST_ANSIBLE_ROOT))
                             .scp(srcRootFolder, PathUtil.parentFolder(AgentConstant.DST_ANSIBLE_ROOT));
                     ssh.runErrorByExceptionAndClose();
