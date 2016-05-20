@@ -394,6 +394,7 @@ public class SftpBackupStorage extends BackupStorageBase {
         String key = asf.getPrivateKey();
         reply.setHostname(getSelf().getHostname());
         reply.setSshKey(key);
+        reply.setSshPort(getSelf().getPort());
         bus.reply(msg, reply);
     }
 
